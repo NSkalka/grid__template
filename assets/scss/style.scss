@@ -1,0 +1,64 @@
+@import "../../libs/normalize-scss/sass/normalize/import-now";
+
+@import "skin";
+@import "variables";
+@import "mixins";
+@import "mixins-media";
+@import "extends";
+
+@import "common";
+@import "header/header";
+@import "header/header-overlay";
+@import "header/header-menu";
+@import "header/header-logo";
+@import "header/header-navbar";
+@import "header/header-content";
+
+@import "sections/skills/skills";
+@import "sections/skills/skill-item";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/posts/post-item";
+@import "sections/posts/section-posts";
+@import "sections/posts/post-actions";
+
+@import "footer";
+
+
+/*наш код здесь*/
+
+/*3 - медиазпросы в конце и приходится часто и много скролить к основному правилу*/
+/*4 - постоянно повторяются цвета, хотелось повторно их использовать*/
+/*5 - повторяются размеры*/
+
+
+@media (max-width: 992px) {
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+  }
+}
+
+@media (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+  }
+}
+
+@media (max-width: 576px) {
+  .skills {
+    padding: 20px;
+  }
+  .skills__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    grid-gap: 20px;
+  }
+}
+
+@media (max-height: 640px) {
+  .skills__container {
+    grid-auto-rows: 200px;
+  }
+}

@@ -1,0 +1,8 @@
+// extend служат как шаблон значения, которое мі задаем один раз через % и потом повторяем через @extend
+
+%container {
+  max-width: $ul;
+  margin: 0 auto;
+  padding-right: $gap;
+  padding-left: $gap;
+}
