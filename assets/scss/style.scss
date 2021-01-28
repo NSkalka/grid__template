@@ -20,17 +20,14 @@
 @import "sections/section-form";
 @import "sections/posts/post-item";
 @import "sections/posts/section-posts";
-@import "sections/posts/post-actions";
 
 @import "footer";
-
 
 /*наш код здесь*/
 
 /*3 - медиазпросы в конце и приходится часто и много скролить к основному правилу*/
 /*4 - постоянно повторяются цвета, хотелось повторно их использовать*/
 /*5 - повторяются размеры*/
-
 
 @media (max-width: 992px) {
   .skills__container {
